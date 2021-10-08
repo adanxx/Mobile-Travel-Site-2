@@ -1,0 +1,12 @@
+/*Importing all the different block and & sentix into the main css files:*/
+@import 'normalize.css';
+@import'./base/_variables.css';
+@import './base/_globale';
+@import './base/_mixins.css';
+@import './modules/_large-hero';
+@import './modules/_btn.css';
+@import './modules/_wrapper';
+@import './modules/_page-section.css';
+@import './modules/_headline.css';
+@import './modules/_row';
+@import './modules/_generic-conent-container.css';
