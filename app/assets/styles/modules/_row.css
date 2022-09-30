@@ -1,78 +1,69 @@
 .row {
 
-    @mixin clearfix {}
-
-    &--gutters {
-        margin-right: -65px;
-    }
-
-    &--gutters>div {
-        padding-right: 65px;
-    }
-
-    &--gutters-large {
-        margin-right: -100px;
-    }
-
-    &--gutters-large>div {
-        padding-right: 100px;
-    }
-
-
-    &--gutters-small {
-        padding-right: -45px;
-    }
-
-    &--gutters-small>div {
-        padding-right: 45px;
-    }
+    /* @mixin clearfix {}*/
 
     &--t-padding {
         padding-top: 80px;
     }
 
-    @mixin atSmall {
-        &__medium-4 {
-            max-width: 976px;
-        }
-    }
 
     &__b-margin {
         margin-bottom: 1rem;
     }
 
+
     @mixin atMedium {
+
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+
+
+        &--gutters {
+            column-gap: 5.3%;
+        }
+
+        &--gutters-large {
+            column-gap: 8%;
+        }
+
+        &--gutters-small {
+            column-gap: 3.6%;
+        }
+
+        &__Large-1,
+        &__Large-2,
+        &__Large-3,
+        &__Large-4,
+        &__Large-5,
+        &__Large-6,
+        &__Large-7,
+        &__Large-8,
+        &__Large-9,
+        &__Large-10,
+        &__Large-11,
+        &__Large-12{
+            grid-column: span 12;
+        }
+
 
         &__b-margin {
             margin-bottom: 0;
         }
 
         &__medium-4 {
-            float: left;
-            width: 33.33%;
-        }
-
-        &__medium-4--larger {
-            width: 37%
+            grid-column: span 4;
         }
 
         &__medium-6 {
-            float: left;
-            width: 50%;
+            grid-column: span 6;
+
         }
 
         &__medium-8 {
-            float: left;
-            width: 66.66%;
+            grid-column: span 8;
         }
 
-        &__medium-8-smaller {
-            width: 63%;
-        }
 
-        &__medium-4-last {
-            padding-right: 62px;
-        }
     }
 
     @mixin atLarge {
@@ -82,35 +73,26 @@
         }
 
         &__Large-4 {
-            float: left;
-            width: 33.33%;
-        }
-
-        &__Large-4--larger {
-            width: 37%
+            grid-column: span 4;
         }
 
         &__Large-6 {
-            float: left;
-            width: 50%;
+            grid-column: span 6;
         }
 
         &__Large-8 {
-            float: left;
-            width: 66.66%;
+            grid-column: span 8;
         }
+    }
 
-        &__Large-8-smaller {
-            width: 63%;
-        }
-
-        &__Large-4-last {
-            padding-right: 62px;
+    @mixin atSmall {
+        &__medium-4 {
+            max-width: 976px;
         }
     }
 
 
-    /*Begin Hight rule*/
+    /*Begin Height rule*/
     &--equal-height-medium {
 
         @mixin atMedium {
@@ -118,8 +100,7 @@
             margin-right: -45px;
         }
 
-        &>div {
-            float: none;
+        & > div {
             display: flex;
         }
     }
@@ -127,13 +108,10 @@
     &--equal-height-Large {
 
         @mixin atLarge {
-            display: flex;
-            margin-right: -45px;
-        }
-
-        &>div {
-            float: none;
-            display: flex;
+         
+            & > div {
+                display: flex;
+            }
         }
     }
 

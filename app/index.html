@@ -36,15 +36,16 @@
 
   <div class="large-hero">
     <!-- <img src="assets/images/hero--large.jpg"> -->
-    <picture>
+    <picture class="large-hero__image">
       <source srcset="
             ./assets/images/hero--large.jpg,
             ./assets/images/hero--large-hi-dpi.jpg
           " media="(min-width: 1280px), 100vw" />
       <source srcset="./assets/images/hero--medium.jpg" media="(min-width: 990px)" />
       <source srcset="./assets/images/hero--small.jpg" media="(min-width: 640px)" />
-      <img class="large-hero__image" src="./assets/images/hero--smaller.jpg" alt="Coast View of the ocean" />
+      <img src="./assets/images/hero--smaller.jpg" alt="Coast View of the ocean" />
     </picture>
+    
     <div class="large-hero__text-content">
       <div class="wrapper wrapper--t-margin-small">
         <h1 class="large-hero__title">Your clarity.</h1>
