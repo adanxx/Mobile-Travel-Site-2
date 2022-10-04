@@ -1,11 +1,10 @@
-import { times } from "lodash";
-
 class MobileMenu {
 
     constructor(){
        this.menuIcon = document.querySelector('.site-header__menu-icon');
        this.menuContent = document.querySelector('.site-header__menu-contant');
-       this.events()
+       this.siteHeader = document.querySelector(".site-header");
+       this.events();
     }
 
     events(){
@@ -14,6 +13,7 @@ class MobileMenu {
 
     toggleTheMenu(){
         this.menuContent.classList.toggle("site-header__menu-contant--is-visible");
+        this.siteHeader.classList.toggle("site-header__is-expanded");
     }
 }
 
